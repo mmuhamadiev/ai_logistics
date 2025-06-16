@@ -1,0 +1,28 @@
+{
+  "flutter":{
+  "platforms":{
+    "dart":{
+      "lib/firebase_options.dart":{
+        "projectId":"ai-logistics-management","configurations":{
+          "web":"1:994431892792:web:974e5ed1247739e87615cd"
+        }
+      }
+    }
+  }
+},
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    }
+  ],
+  "firestore": {
+    "indexes": "firestore.indexes.json"
+  }
+}
