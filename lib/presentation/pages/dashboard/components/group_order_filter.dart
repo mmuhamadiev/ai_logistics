@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/domain/models/order_group_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_group_model.dart';
 
 class GroupOrderFilter extends StatefulWidget {
   final List<OrderGroupModel> groups;

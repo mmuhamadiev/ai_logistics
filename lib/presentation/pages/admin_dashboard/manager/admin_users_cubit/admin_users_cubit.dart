@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/users_repository.dart';
-import 'package:hegelmann_order_automation/domain/models/user_model.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/users_repository.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/user_model.dart';
 
 part 'admin_users_state.dart';
 

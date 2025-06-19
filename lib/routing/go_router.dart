@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/presentation/pages/admin_dashboard/view/admin_dashboard_page.dart';
-import 'package:hegelmann_order_automation/presentation/pages/admin_dashboard/view/admin_dashboard_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/admin_dashboard/view/admin_settings_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/admin_dashboard/view/user_management_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/view/all_orders_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/view/auto_order_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/view/group_order_view.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/view/user_dashboard_overview.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/view/user_dashboard_page.dart';
-import 'package:hegelmann_order_automation/presentation/pages/login/view/login_page.dart';
-import 'package:hegelmann_order_automation/presentation/pages/splash/view/splash_page.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/admin_dashboard/view/admin_dashboard_page.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/admin_dashboard/view/admin_dashboard_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/admin_dashboard/view/admin_settings_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/admin_dashboard/view/user_management_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/view/all_orders_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/view/auto_order_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/view/group_order_view.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/view/user_dashboard_overview.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/view/user_dashboard_page.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/login/view/login_page.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/splash/view/splash_page.dart';
 
 // final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 final router  = GoRouter(

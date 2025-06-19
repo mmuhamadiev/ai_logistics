@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_cancellable_tile_provider/flutter_map_cancellable_tile_provider.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/domain/models/post_code_model.dart';
-import 'package:hegelmann_order_automation/generated/assets.dart';
-import 'package:hegelmann_order_automation/utils/route_optimizer.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/post_code_model.dart';
+import 'package:ai_logistics_management_order_automation/generated/assets.dart';
+import 'package:ai_logistics_management_order_automation/utils/route_optimizer.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:osrm/osrm.dart';
 import 'dart:math' as math;

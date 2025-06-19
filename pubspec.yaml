@@ -1,5 +1,5 @@
-name: hegelmann_order_automation
-description: "Hegelmann order automation."
+name: ai_logistics_management_order_automation
+description: "AI order automation."
 
 publish_to: 'none'
 
@@ -82,6 +82,9 @@ dependencies:
 
   #version
   package_info_plus: ^8.2.1
+
+  #others
+  http: ^1.4.0
 
   cupertino_icons: ^1.0.8
 

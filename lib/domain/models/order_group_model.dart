@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/domain/models/commnet_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_log_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/domain/models/driver_info_model.dart'; // Assuming this contains DriverInfo model
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/commnet_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_log_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/driver_info_model.dart'; // Assuming this contains DriverInfo model
 
 class OrderGroupModel {
   final String groupID;
@@ -110,6 +110,19 @@ class OrderGroupModel {
       'carComment': carComment?.toJson(),
       'logs': logs.map((log) => log.toJson()).toList(),
       'driverInfo': driverInfo?.toJson(), // Serialize driver info if available
+    };
+  }
+
+  /// Returns a JSON map with only the fields required for Genkit.
+  Map<String, dynamic> toGenkitJson() {
+    return {
+      'groupID': groupID,
+      'totalDistance': totalDistance,
+      'pricePerKm': pricePerKm,
+      'totalPrice': totalPrice,
+      'totalLDM': totalLDM,
+      'totalWeight': totalWeight,
+      'orders': orders.map((order) => order.toGenkitJson()).toList(),
     };
   }
 

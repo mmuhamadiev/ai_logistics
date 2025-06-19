@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/options/board_item_option.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/ui/parts/calendar.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/ui/parts/during_calendar.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/ui/parts/item.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/board_datetime_options_extension.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/options/board_item_option.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/ui/parts/calendar.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/ui/parts/during_calendar.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/ui/parts/item.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/board_datetime_options_extension.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
 
 import '../board_datetime_options.dart';
 import '../utils/board_enum.dart';

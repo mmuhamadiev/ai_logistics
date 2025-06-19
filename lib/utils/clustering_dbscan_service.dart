@@ -1,14 +1,14 @@
 import 'dart:math';
 
 import 'package:geolocator/geolocator.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/utils/adr_validator_service.dart';
-import 'package:hegelmann_order_automation/utils/route_optimizer.dart';
-import 'package:hegelmann_order_automation/utils/time_manager.dart';
-import 'package:hegelmann_order_automation/domain/models/car_type_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_group_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/domain/models/post_code_model.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/utils/adr_validator_service.dart';
+import 'package:ai_logistics_management_order_automation/utils/route_optimizer.dart';
+import 'package:ai_logistics_management_order_automation/utils/time_manager.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/car_type_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_group_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/post_code_model.dart';
 import 'package:timezone/timezone.dart' as tz;
 
 class ClusteringDBSCANService {

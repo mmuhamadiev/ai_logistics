@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_animtype.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_options.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/utils/animate.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/utils/images.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/widgets/quickalert_buttons.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/widgets/quickalert_container.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_animtype.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_options.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/utils/animate.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/utils/images.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/widgets/quickalert_buttons.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/widgets/quickalert_container.dart';
 
 /// QuickAlert
 class QuickAlert {

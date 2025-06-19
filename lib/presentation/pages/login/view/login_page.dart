@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/config/screen_size.dart';
-import 'package:hegelmann_order_automation/generated/assets.dart';
-import 'package:hegelmann_order_automation/presentation/manager/session/session_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/error_notification.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/config/screen_size.dart';
+import 'package:ai_logistics_management_order_automation/generated/assets.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/session/session_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/error_notification.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

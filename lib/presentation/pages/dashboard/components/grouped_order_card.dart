@@ -1,24 +1,28 @@
+import 'dart:developer';
+
+import 'package:ai_logistics_management_order_automation/data/services/genkit.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/grouping_helper_result_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/config/screen_size.dart';
-import 'package:hegelmann_order_automation/utils/adr_validator_service.dart';
-import 'package:hegelmann_order_automation/domain/models/car_type_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_group_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/filter/filter_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/group_order_list/group_order_list_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_group_detail_dialog_component.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/error_notification.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
-import 'package:hegelmann_order_automation/utils/clustering_dbscan_service.dart';
-import 'package:hegelmann_order_automation/utils/route_optimizer.dart';
-import 'package:hegelmann_order_automation/utils/time_manager.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/config/screen_size.dart';
+import 'package:ai_logistics_management_order_automation/utils/adr_validator_service.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/car_type_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_group_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/filter/filter_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/group_order_list/group_order_list_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_group_detail_dialog_component.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/error_notification.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
+import 'package:ai_logistics_management_order_automation/utils/clustering_dbscan_service.dart';
+import 'package:ai_logistics_management_order_automation/utils/route_optimizer.dart';
+import 'package:ai_logistics_management_order_automation/utils/time_manager.dart';
 
 class GroupInfoCard extends StatefulWidget {
   final OrderGroupModel orderGroup;
@@ -47,6 +51,7 @@ class _GroupInfoCardState extends State<GroupInfoCard> {
   late bool validateWeight;
   late bool validateDate;
   late bool validateAdr;
+  bool _isAiConfirmLoading = false;
 
   late CarTypeModel carType;
 
@@ -136,6 +141,48 @@ class _GroupInfoCardState extends State<GroupInfoCard> {
       validateWeight = totalWeight <= carType.maxWeight;
       validateDate = TimeManager.validateTimeWindows(widget.orderGroup.orders, optimizedGroup);
       validateAdr = adrValidatorService.canGroupOrders(widget.orderGroup.orders);
+    }
+  }
+
+  Future<void> _aiConfirmOrder(BuildContext context) async {
+    try {
+      // Step 1: Fetch the global filter
+      await context.read<FilterCubit>().fetchFilter();
+      final filterState = context.read<FilterCubit>().state;
+
+      if (filterState is FilterLoaded) {
+        final filter = filterState.filter;
+
+          // Criteria met: Add order directly
+          var result = await context
+              .read<UserProfileCubit>()
+              .checkIfUserProfileActive(context);
+          if (result) {
+            final user = context
+                .read<UserProfileCubit>()
+                .state
+            as UserProfileLoaded;
+
+            context
+                .read<GroupOrderListCubit>()
+                .addOrderGroup(
+                widget.orderGroup,
+                user.user.userID,
+                user.user.name);
+          } else {
+            showErrorNotification(context,
+                'Sorry action your connection is lost');
+          }
+      } else if (filterState is FilterError) {
+        // Handle filter fetch error
+        showErrorNotification(context, filterState.message);
+      } else {
+        // Handle unexpected state
+        showErrorNotification(context, 'Failed to validate filter criteria. Please try again.');
+      }
+    } catch (e) {
+      // Handle any other errors
+      showErrorNotification(context, 'Error fetching filter: ${e.toString()}');
     }
   }
 
@@ -305,6 +352,23 @@ class _GroupInfoCardState extends State<GroupInfoCard> {
                   const SizedBox(width: 10),
                   _buildInfoBox(Icons.euro, "Price per km", "${widget.orderGroup.pricePerKm.toStringAsFixed(2)} EUR/km"),
                   Spacer(),
+                  OutlinedButton(
+                    onPressed: () {
+                      _aiConfirmGroup(context);
+                    },
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      side: const BorderSide(color: Colors.black),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    ),
+                    child: _isAiConfirmLoading
+                        ? SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                        :Text('Ai Confirm'),
+                  ),
                   _buildOutlinedButton("View Details", widget.orderGroup),
                   // const SizedBox(width: 10),
                   // _buildConfirmButton("Confirm Group"),
@@ -313,6 +377,115 @@ class _GroupInfoCardState extends State<GroupInfoCard> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Future<void> _aiConfirmGroup(BuildContext context) async {
+    log(widget.orderGroup.toJson().toString());
+
+    setState(() => _isAiConfirmLoading = true);
+    try {
+      final input = widget.orderGroup.toGenkitJson();
+      final result = await Genkit.groupingHelperFlow(input);
+      await showGroupingHelperResultDialog(context, result);
+      // Use result as needed
+    } catch (e, stack) {
+      print('Error in groupingHelperFlow: $e');
+      print('Stack trace: $stack');
+      showErrorNotification(context, 'AI grouping failed');
+    } finally {
+      setState(() => _isAiConfirmLoading = false);
+    }
+  }
+
+  Future<void> showGroupingHelperResultDialog(BuildContext context, GroupingHelperResultModel result) {
+    if(result.isGoodGroup == true) {
+      var isTeamLead = context.read<UserProfileCubit>().state is UserProfileLoaded? (context.read<UserProfileCubit>().state as UserProfileLoaded).user.userRole == UserRoles.allRoles[1]: false;
+      if(isTeamLead == false) {
+        showTopSnackbarInfo(context, 'You do not have access');
+      } else {
+        _aiConfirmOrder(context);
+      }
+    }
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('AI Grouping Result'),
+        content: SizedBox(
+        width: 400, // Adjust width as needed
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    result.isGoodGroup ? Icons.check_circle : Icons.cancel,
+                    color: result.isGoodGroup ? Colors.green : Colors.red,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    result.isGoodGroup ? "Good Group" : "Not a Good Group",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: result.isGoodGroup ? Colors.green : Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Reasoning',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              Text(result.reasoning.isNotEmpty ? result.reasoning : "N/A"),
+              const SizedBox(height: 16),
+              Text(
+                'Issues',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              if (result.issues.isNotEmpty)
+                ListView.separated(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: result.issues.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 2),
+                  itemBuilder: (context, i) => Text('• ${result.issues[i]}'),
+                )
+              else
+                const Text('No issues.'),
+              const SizedBox(height: 16),
+              Text(
+                'Recommendations',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              if (result.recommendations.isNotEmpty)
+                ListView.separated(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: result.recommendations.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 2),
+                  itemBuilder: (context, i) => Text('• ${result.recommendations[i]}'),
+                )
+              else
+                const Text('No recommendations.'),
+            ],
+          ),
+        ),
+      ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              context.pop();
+            },
+            child: const Text('OK'),
+          ),
+        ],
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/auth_repository.dart';
-import 'package:hegelmann_order_automation/domain/models/user_model.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/auth_repository.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/user_model.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 part 'firebase_auth_state.dart';

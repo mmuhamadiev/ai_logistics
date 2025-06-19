@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
 
 import '../../utils/board_enum.dart';
 import 'calendar.dart';

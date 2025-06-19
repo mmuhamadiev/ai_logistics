@@ -1,4 +1,4 @@
-import 'package:hegelmann_order_automation/data/services/firebase_helper.dart';
+import 'package:ai_logistics_management_order_automation/data/services/firebase_helper.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class AppVersionRepository {

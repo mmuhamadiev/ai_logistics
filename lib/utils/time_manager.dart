@@ -1,5 +1,5 @@
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/domain/models/time_window.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/time_window.dart';
 
 class TimeManager {
   /// Check if two time windows overlap

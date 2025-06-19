@@ -1,5 +1,5 @@
-import 'package:hegelmann_order_automation/data/services/firebase_filter_helper.dart';
-import 'package:hegelmann_order_automation/domain/models/filter_model.dart';
+import 'package:ai_logistics_management_order_automation/data/services/firebase_filter_helper.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/filter_model.dart';
 
 abstract class FilterRepository {
   /// Save a filter to Firestore

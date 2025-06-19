@@ -1,4 +1,5 @@
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
+
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
 
 class AdrValidatorService {
   /// Validates if the given list of orders can be grouped together.

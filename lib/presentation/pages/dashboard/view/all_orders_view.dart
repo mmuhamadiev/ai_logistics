@@ -1,23 +1,23 @@
+import 'package:ai_logistics_management_order_automation/config/screen_size.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_rx/src/rx_workers/utils/debouncer.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/config/screen_size.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/order_list/order_list_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/edit_order_dialog.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_filter.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/clock.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/error_notification.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/order_list/order_list_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/edit_order_dialog.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_filter.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/clock.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/error_notification.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
 import 'package:intl/intl.dart';
 
 class AllOrdersListView extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/users_management_repository.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/users_management_repository.dart';
 
 part 'users_management_state.dart';
 

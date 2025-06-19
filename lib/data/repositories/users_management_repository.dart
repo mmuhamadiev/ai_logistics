@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_format/date_format.dart';
-import 'package:hegelmann_order_automation/data/services/firebase_helper.dart';
-import 'package:hegelmann_order_automation/domain/models/filter_model.dart';
-import 'package:hegelmann_order_automation/domain/models/user_model.dart';
+import 'package:ai_logistics_management_order_automation/data/services/firebase_helper.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/filter_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/user_model.dart';
 
 abstract class UsersManagementRepository {
   Stream<List<UserModel>> streamAllUsers();

@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/data/repositories/order_repository.dart';
-import 'package:hegelmann_order_automation/domain/models/commnet_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/order_repository.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/commnet_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
 
 part 'order_list_state.dart';
 

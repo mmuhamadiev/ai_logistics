@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/app_version_repository.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/app_version_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'app_version_state.dart';

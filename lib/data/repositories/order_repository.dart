@@ -1,6 +1,6 @@
-import 'package:hegelmann_order_automation/data/services/order_firebase_service.dart';
-import 'package:hegelmann_order_automation/domain/models/commnet_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/data/services/order_firebase_service.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/commnet_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
 
 abstract class OrderRepository {
   Future<void> deleteOrder(String orderID, String userID, String userName);

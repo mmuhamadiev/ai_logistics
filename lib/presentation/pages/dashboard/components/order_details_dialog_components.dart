@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/domain/models/commnet_model.dart';
-import 'package:hegelmann_order_automation/domain/models/driver_info_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/order_list/order_list_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/map_view_widget.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/error_notification.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/commnet_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/driver_info_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/order_list/order_list_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/map_view_widget.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/error_notification.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
 
 // Placeholder for Map
 Widget buildMapPlaceholder(OrderModel order) {

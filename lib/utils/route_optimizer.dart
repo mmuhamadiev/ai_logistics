@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
 
 class RouteOptimizer {
   /// Calculate Haversine Distance between two points

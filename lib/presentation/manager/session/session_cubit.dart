@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/auth_repository.dart';
-import 'package:hegelmann_order_automation/data/repositories/users_management_repository.dart';
-import 'package:hegelmann_order_automation/data/services/multi_storage.dart';
-import 'package:hegelmann_order_automation/domain/models/user_model.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/auth_repository.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/users_management_repository.dart';
+import 'package:ai_logistics_management_order_automation/data/services/multi_storage.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/user_model.dart';
 
 part 'session_state.dart';
 

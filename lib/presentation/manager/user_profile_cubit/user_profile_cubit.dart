@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:hegelmann_order_automation/data/repositories/users_management_repository.dart';
-import 'package:hegelmann_order_automation/data/services/multi_storage.dart';
-import 'package:hegelmann_order_automation/domain/models/filter_model.dart';
-import 'package:hegelmann_order_automation/domain/models/user_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/session/session_cubit.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/users_management_repository.dart';
+import 'package:ai_logistics_management_order_automation/data/services/multi_storage.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/filter_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/user_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/session/session_cubit.dart';
 
 part 'user_profile_state.dart';
 

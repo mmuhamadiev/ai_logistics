@@ -14,6 +14,5 @@ class Assets {
   static const String imagesSuccess = 'assets/images/success.png';
   static const String imagesTruckLoad = 'assets/images/truck_load.png';
   static const String imagesWarning = 'assets/images/warning.png';
-  static const String postalcodesAllPostalcodes = 'assets/postalcodes/all_postalcodes.json';
 
 }

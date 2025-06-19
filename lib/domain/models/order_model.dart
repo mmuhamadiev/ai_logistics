@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/domain/models/commnet_model.dart';
-import 'package:hegelmann_order_automation/domain/models/driver_info_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_log_model.dart';
-import 'package:hegelmann_order_automation/domain/models/post_code_model.dart';
-import 'package:hegelmann_order_automation/domain/models/time_window.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/commnet_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/driver_info_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_log_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/post_code_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/time_window.dart';
 
 class OrderModel {
   final String orderID;
@@ -143,6 +143,43 @@ class OrderModel {
       'driverInfo': driverInfo?.toJson(),
       'comments': comments.map((comment) => comment.toJson()).toList(),
       'orderLogs': orderLogs.map((log) => log.toJson()).toList(),
+      'isAdrOrder': isAdrOrder,
+      'canGroupWithAdr': canGroupWithAdr,
+    };
+  }
+
+  Map<String, dynamic> toGenkitJson() {
+    return {
+      'orderID': orderID,
+      'orderName': orderName,
+      'pickupPlace': {
+        'name': pickupPlace.name,
+        'postalCode': pickupPlace.postalCode,
+        'countryCode': pickupPlace.countryCode,
+        'code': pickupPlace.code,
+        'latitude': pickupPlace.latitude,
+        'longitude': pickupPlace.longitude,
+      },
+      'deliveryPlace': {
+        'name': deliveryPlace.name,
+        'postalCode': deliveryPlace.postalCode,
+        'countryCode': deliveryPlace.countryCode,
+        'code': deliveryPlace.code,
+        'latitude': deliveryPlace.latitude,
+        'longitude': deliveryPlace.longitude,
+      },
+      'pickupTimeWindow': {
+        'start': pickupTimeWindow.start.toIso8601String(),
+        'end': pickupTimeWindow.end.toIso8601String(),
+      },
+      'deliveryTimeWindow': {
+        'start': deliveryTimeWindow.start.toIso8601String(),
+        'end': deliveryTimeWindow.end.toIso8601String(),
+      },
+      'ldm': ldm,
+      'weight': weight,
+      'price': price,
+      'carTypeName': carTypeName,
       'isAdrOrder': isAdrOrder,
       'canGroupWithAdr': canGroupWithAdr,
     };

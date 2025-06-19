@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_animtype.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_animtype.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
 
 /// Alert Options
 class QuickAlertOptions {

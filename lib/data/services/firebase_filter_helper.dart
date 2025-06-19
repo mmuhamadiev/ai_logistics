@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hegelmann_order_automation/domain/models/filter_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/filter_model.dart';
 
 class FirebaseFilterHelper {
   static const String collectionName = 'global_settings';

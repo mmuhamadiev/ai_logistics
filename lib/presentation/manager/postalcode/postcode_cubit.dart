@@ -5,8 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hegelmann_order_automation/domain/models/post_code_model.dart';
-import 'package:hegelmann_order_automation/generated/assets.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/post_code_model.dart';
 
 class PostcodeCubit extends Cubit<List<PostalCode>> {
   PostcodeCubit() : super([]);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/manager/navigation/navigation_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/navigation/navigation_cubit.dart';
 
 class CustomNavigatorObserver extends NavigatorObserver {
   final NavigationCubit navigationCubit;

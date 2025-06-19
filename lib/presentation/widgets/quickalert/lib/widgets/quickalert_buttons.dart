@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_options.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_options.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/quickalert/lib/models/quickalert_type.dart';
 
 class QuickAlertButtons extends StatelessWidget {
   final QuickAlertOptions options;

@@ -1,7 +1,7 @@
 // Infographic Card Builder
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
 
 Widget buildInfographicCard({
   required String title,

@@ -3,22 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_rx/src/rx_workers/utils/debouncer.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/utils/adr_validator_service.dart';
-import 'package:hegelmann_order_automation/domain/models/car_type_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_group_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/filter/filter_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/group_order_list/group_order_list_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/order_list/order_list_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/error_notification.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
-import 'package:hegelmann_order_automation/utils/clustering_dbscan_service.dart';
-import 'package:hegelmann_order_automation/utils/route_optimizer.dart';
-import 'package:hegelmann_order_automation/utils/time_manager.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/utils/adr_validator_service.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/car_type_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_group_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/filter/filter_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/group_order_list/group_order_list_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/order_list/order_list_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/error_notification.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/notifications/top_snackbar_info.dart';
+import 'package:ai_logistics_management_order_automation/utils/clustering_dbscan_service.dart';
+import 'package:ai_logistics_management_order_automation/utils/route_optimizer.dart';
+import 'package:ai_logistics_management_order_automation/utils/time_manager.dart';
 
 class GroupUpdateConstructor extends StatefulWidget {
 

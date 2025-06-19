@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/board_datetime_options.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/board_enum.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/board_datetime_options.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/board_enum.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
 import 'package:intl/intl.dart';
 
 class SingleCalendarWidget extends CalendarWidget {

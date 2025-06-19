@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/ui/parts/item.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/board_enum.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/ui/parts/item.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/board_enum.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
 
 import '../ui/parts/focus_node.dart';
 import 'board_custom_item_option.dart';

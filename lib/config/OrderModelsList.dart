@@ -1,10 +1,10 @@
 
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/domain/models/post_code_model.dart';
-import 'package:hegelmann_order_automation/domain/models/time_window.dart';
-
-List<OrderModel> templateOrdersForClusterTest2 = [
+// import 'package:ai_logistics_management_order_automation/config/constants.dart';
+// import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+// import 'package:ai_logistics_management_order_automation/domain/models/post_code_model.dart';
+// import 'package:ai_logistics_management_order_automation/domain/models/time_window.dart';
+//
+// List<OrderModel> templateOrdersForClusterTest2 = [
 
   // OrderModel(
   //   orderID: 'ORDER001',
@@ -2293,4 +2293,4 @@ List<OrderModel> templateOrdersForClusterTest2 = [
   //   comments: [],
   //   orderLogs: [],
   // ),
-];
+// ];

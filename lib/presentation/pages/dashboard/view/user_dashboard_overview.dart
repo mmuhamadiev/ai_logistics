@@ -3,17 +3,17 @@ import 'package:firebase_pagination/firebase_pagination.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hegelmann_order_automation/config/app_colors.dart';
-import 'package:hegelmann_order_automation/config/app_text_styles.dart';
-import 'package:hegelmann_order_automation/config/constants.dart';
-import 'package:hegelmann_order_automation/config/screen_size.dart';
-import 'package:hegelmann_order_automation/domain/models/order_group_model.dart';
-import 'package:hegelmann_order_automation/domain/models/order_model.dart';
-import 'package:hegelmann_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
-import 'package:hegelmann_order_automation/presentation/pages/dashboard/components/order_group_detail_dialog_component.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/clock.dart';
+import 'package:ai_logistics_management_order_automation/config/app_colors.dart';
+import 'package:ai_logistics_management_order_automation/config/app_text_styles.dart';
+import 'package:ai_logistics_management_order_automation/config/constants.dart';
+import 'package:ai_logistics_management_order_automation/config/screen_size.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_group_model.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/order_model.dart';
+import 'package:ai_logistics_management_order_automation/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/create_order_dialog.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_details_dialog_components.dart';
+import 'package:ai_logistics_management_order_automation/presentation/pages/dashboard/components/order_group_detail_dialog_component.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/clock.dart';
 import 'package:intl/intl.dart';
 
 class UserDashboardOverview extends StatefulWidget {

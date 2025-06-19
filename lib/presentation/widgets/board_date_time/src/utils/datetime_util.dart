@@ -1,4 +1,4 @@
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/options/board_item_option.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/options/board_item_option.dart';
 
 import 'board_enum.dart';
 

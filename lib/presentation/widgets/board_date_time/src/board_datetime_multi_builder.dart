@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/board_datetime_picker.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/ui/board_datetime_contents_state.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/board_datetime_options_extension.dart';
-import 'package:hegelmann_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/board_datetime_picker.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/ui/board_datetime_contents_state.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/board_datetime_options_extension.dart';
+import 'package:ai_logistics_management_order_automation/presentation/widgets/board_date_time/src/utils/datetime_util.dart';
 
 import 'ui/parts/header_multi.dart';
 import 'ui/picker_calendar_widget.dart';

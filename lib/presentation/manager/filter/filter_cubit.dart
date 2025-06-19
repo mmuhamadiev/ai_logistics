@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:hegelmann_order_automation/data/repositories/filter_repository.dart';
-import 'package:hegelmann_order_automation/domain/models/filter_model.dart';
+import 'package:ai_logistics_management_order_automation/data/repositories/filter_repository.dart';
+import 'package:ai_logistics_management_order_automation/domain/models/filter_model.dart';
 
 part 'filter_state.dart';
 
